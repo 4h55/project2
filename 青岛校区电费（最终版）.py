@@ -140,7 +140,7 @@ def job():
     server.quit()  # 关闭SMTP连接
 
 #定时设置
-schedule.every(int(input("您想隔多少个小时检查电量是否不足？请输入小时数"))).hours.do(job)
+schedule.every(float(input("您想隔多少个小时检查电量是否不足？请输入小时数"))).hours.do(job)
 while True:
      schedule.run_pending()
      time.sleep(1)
